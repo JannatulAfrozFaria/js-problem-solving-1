@@ -16,9 +16,11 @@
 
 //How to arrange the students' roll numbers in an ascending order?------PROBLEM---3
 //---------------------------------------------------------------------
-
+const roll_numbers = [4,6,1,7,13,11,18,26,56,34,31,45,47,87,86,84]
 //---------------------------------------------------------------------
-
+console.log(roll_numbers.sort(function(){
+    
+}))
 
 
 
