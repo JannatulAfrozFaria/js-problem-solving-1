@@ -5,18 +5,16 @@
 
 // }
 // console.log(getRandBetweenMinAndMax(1,6))
+
+
+//How to Arrange the Names of Students Alphabetically? -------PROBLEM-------2
 //---------------------------------------------------------------------
-
-
-//Print Randomly (1 to 6) for LUDU -------PROBLEM-------2
-//---------------------------------------------------------------------
-const students = ["Nafia","Naziha","Safia","Tasfia","Faria","Safwan","Alvee","Afroz","Amena"]
-console.log(students.sort())
-//---------------------------------------------------------------------
+// const students = ["Nafia","Naziha","Safia","Tasfia","Faria","Safwan","Alvee","Afroz","Amena"]
+// console.log(students.sort())
 
 
 
-
+//How to arrange the students' roll numbers in an ascending order?------PROBLEM---3
 //---------------------------------------------------------------------
 
 //---------------------------------------------------------------------
