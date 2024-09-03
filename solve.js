@@ -52,11 +52,10 @@ function countVowels(sentence){
     return count;
 }
 countVowels("I love my country")
-//---------------------------------------------------------------------
 
 
 
-
+//How to extract the Duplicate numbers from an array?-----------PROBLEM---6
 //---------------------------------------------------------------------
 
 //---------------------------------------------------------------------
