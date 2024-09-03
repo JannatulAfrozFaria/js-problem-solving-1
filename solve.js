@@ -57,11 +57,11 @@ countVowels("I love my country")
 
 //How to find out the numbers which are unique (don't have Duplicates) in an array?-----PROBLEM---7
 //---------------------------------------------------------------------
-const numArray2 = [1,22,4,5,4,7,9,7,6,4,5,3,13,6,13,34,5,34,90,101,25]
-const uniques = numArray.filter(function(value,index,array){
-    return array.indexOf(value)!== index
-})
-console.log(duplicates);
+// const numArray2 = [1,22,4,5,4,7,9,7,6,4,5,3,13,6,13,34,5,34,90,101,25]
+// const uniques = numArray.filter(function(value,index,array){
+//     return array.indexOf(value)!== index
+// })
+// console.log(duplicates);
 
 
 
@@ -71,7 +71,7 @@ console.log(duplicates);
 //---------------------------------------------------------------------
 const numArray = [1,22,4,5,4,7,9,7,6,4,5,3,13,6,13,34,5,34,90,101,25]
 const duplicates = numArray.filter(function(value,index,array){
-    return array.indexOf(value)!== index
+    return array.indexOf(value) === index
 })
 console.log(duplicates);
 //---------------------------------------------------------------------
