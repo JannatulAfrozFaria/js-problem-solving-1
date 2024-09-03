@@ -41,8 +41,10 @@
 const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 function countVowels(sentence){
     let count = 0;
+    const letters = Array.from(sentence);
     console.log(`There are ${count} vowels in this sentence`)
 }
+countVowels("I love my country")
 //---------------------------------------------------------------------
 
 
