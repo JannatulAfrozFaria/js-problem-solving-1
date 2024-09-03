@@ -41,6 +41,7 @@
 const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 function countVowels(sentence){
     let count = 0;
+    //looping through the string to check if there is any vowel, so, converting it to an array is important
     const letters = Array.from(sentence);
     letters.forEach(function(value,index,array){
         if(vowels.includes(value)){
