@@ -36,6 +36,7 @@ function isLeapYear(year){
 isLeapYear(2026);
 
 
+//How to check the total number of vowels in a sentence? ------------PROBLEM---5
 //---------------------------------------------------------------------
 
 //---------------------------------------------------------------------
