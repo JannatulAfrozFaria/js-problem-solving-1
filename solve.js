@@ -57,7 +57,10 @@ countVowels("I love my country")
 
 //How to extract the Duplicate numbers from an array?-----------PROBLEM---6
 //---------------------------------------------------------------------
-
+const numArray = [1,22,4,5,4,7,9,7,6,4,5,3,13,6,13,34,5,34,90,101,25]
+const duplicates = numArray.filter(function(value,index,array){
+    return array.indexOf(value)!== index
+})
 //---------------------------------------------------------------------
 
 
