@@ -137,11 +137,15 @@ const numberDedicatedArray = data.filter(element => element && typeof element ==
 console.log(numberDedicatedArray);
 return(numberDedicatedArray);
 }
-deleteInvalids([7,8,NaN]);
+// deleteInvalids([7,8,NaN]);
 
 
 function password(givenData){
 if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
 return 'invalid';
+}
+else{
+    const pass = `${givenData.siteName} + '#' + ${givenData.name}`
+    console.log(givenData)
 }
 }
