@@ -97,8 +97,15 @@ function countVowels(sentence){
 // সালমান ভাই দেখতে পেলেন যে যাদের নামের শেষে a, y, i , e , o , u, w থাকে তাদেরকে আসলে ক্ষেপান ো যায় না । যমন Tonoy, utsho , Roide, shanto এসব ধরনে র নাম গুল ো কে ব্যাংগ করে উচ্চারন করা যায় না । 
 // সালমান ভাইর জন্য checkName() নামে একটা ফাংশন লি খে দি তে হবে । যেটা একটা স্ট্রি ং
 // ইনপুট নে বে । এবং ফাংশনটি চেক করে দেখবে নাম টি রাখা ভাল ো হবে না খারাপ হবে । ভাল ো হলে সে রিটার্ন করবে Good Name আর না টি খারাপ হলে রিটার্ন করবে Bad Name
+// ইনপুট হি সে বে স্ট্রি ং টাইপে র বাইরে অন্য যে ক োন কি ছুদি লে এটা শুধুমাত্র “invalid” রি টার্ন
+// করবে ।
 //---------------------------------------------------------------------
 function checkName(nickName){
+    if(typeof nickName !== 'string'){
+        console.log('input shpuld be a string')
+        return 'invalid';
+        
+        }
     const goodEnding = ['a' , 'e', 'i', 'o','u','w','y', 'A', 'E', 'I', 'O', 'U', 'W', 'Y']
     const nameEnding = nickName.charAt(nickName.length-1).toLowerCase();
     console.log(nameEnding);
@@ -109,6 +116,6 @@ function checkName(nickName){
         console.log('Bad name')
     }
 }
-checkName('Alvee')
+checkName(1)
 
 //---------------------------------------------------------------------
