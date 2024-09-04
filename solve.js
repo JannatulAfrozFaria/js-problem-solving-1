@@ -164,7 +164,7 @@ else{
 }
 const objectInput = { name: "kolimuddin" , birthYear: 1999 , siteName: "google" }
 const objectInput2 = {  birthYear: 1999 , siteName: "google" }
-passwordGenerate(objectInput2);
+passwordGenerate(objectInput);
 
 
 function password(givenData){
