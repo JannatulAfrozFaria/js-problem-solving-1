@@ -119,3 +119,6 @@ function checkName(nickName){
 checkName(1)
 
 //---------------------------------------------------------------------
+function deleteInvalids(){
+    
+}
