@@ -179,3 +179,22 @@ function password(givenData){
     const outputString = givenData.siteName.charAt(0).toUpperCase() + givenData.siteName.slice(1) + '#' + givenData.name + '@' + givenData.birthYear;
         return outputString;
     }
+
+
+
+
+
+// সেভি ংস এর হিসেব করার জন্যে monthlySavings() নামে একটি ফাংশন তৈরী করে দিতে যেটা ইনপুট হিসেবে নেবে একটি Array (প্রতি মাসে
+// পাওয়া সকল পেমেন্ট ) এবং একটি Number ( শাহেদের লিভি ং কস্ট ) ।
+// শাহেদের যে সকল পেমেন্ট 3000 টাকা বা তার বেশি সে সকল পেমেন্ট থেকে ব্যাংক Tax হিসেবে ২০% টাকা কেটে
+// নেয় । এখন ম োট ইনকাম থেকে Tax গুল ো বাদ দিয়ে এবং Living cost বাদ দিয়ে বাকী যে টাকা থাকে সেটা ই
+// হল ো শাহেদের সেভি ংস । অর্থাৎ ফাংশন টি শাহেদের সেভি ংসকে রিটার্ন করবে । যদি সেভি ংস করার মত ো টাকা না
+// থাকে অর্থাৎ সেভি ংস এর ভ্যালুযদি ০ এর চেয়ে কম হয় তাহলে ফাংশনটি রিটার্ন করবে একটি স্ট্রি ং তাহল ো “earn
+// more” ।
+
+// Input :
+// ফাংশন টি ইনপুট নেবে একটি Array (All payments) এবং একটি number (Living cost) ।
+// Output :
+// ফাংশন টি একটি number অথবা string রিটার্ন করবে ।
+// ● যদি savings 0 বা তার থেকে বেশি হয় তাহলে রি টার্ন করবে একটা number ( Total Savings )
+// ● যদি savings 0 থে কে ছ োট হয় তাহলে রিটার্ন করবে String যার ভ্যালুহবে earn more
