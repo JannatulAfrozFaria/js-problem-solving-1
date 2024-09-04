@@ -80,17 +80,17 @@ function countVowels(sentence){
 //বাকেরকে অসংখ্য টিকেট বিক্রি করতে হয়। বাকেরকে calculateMoney( ) নামে একটি ফাংশন বানিয়ে দিতে হবে যাতে প্রতি দিন টিকেট সেল করার সংখ্যা ইনপুট দিলে সে সকল খরচ বাদ দিয়ে কত টাকা থাকে তা বলে দিতে পারে । 
 // চিড়ি য়াখানায় প্রতি টিকেট বিক্রি হয় ১২০ টাকায় । আর ব্যয় এর মধ্যে প্রতিদিন ১ জন দার োয়ান কে দিতে হয় ৫০০ টাকা এবং ৮ জন স্টাফ কে লাঞ্চ করান োর জন্যে খরচ হয় জনপ্রতি ৫০ টাকা করে ।
 //---------------------------------------------------------------------
-function calculateMoney(tickets){
-    if(tickets > 0){
-        const leftOverMoney = (tickets * 120) - (500 + (8*50))
-        console.log(leftOverMoney)
-        return leftOverMoney;
-    }
-    else{
-        console.log('Ticket Number Must be Positive')
-    }
-}
-calculateMoney(88)
+// function calculateMoney(tickets){
+//     if(tickets > 0){
+//         const leftOverMoney = (tickets * 120) - (500 + (8*50))
+//         console.log(leftOverMoney)
+//         return leftOverMoney;
+//     }
+//     else{
+//         console.log('Ticket Number Must be Positive')
+//     }
+// }
+// calculateMoney(88)
 
 
 
@@ -98,5 +98,17 @@ calculateMoney(88)
 // সালমান ভাইর জন্য checkName() নামে একটা ফাংশন লি খে দি তে হবে । যেটা একটা স্ট্রি ং
 // ইনপুট নে বে । এবং ফাংশনটি চেক করে দেখবে নাম টি রাখা ভাল ো হবে না খারাপ হবে । ভাল ো হলে সে রিটার্ন করবে Good Name আর না টি খারাপ হলে রিটার্ন করবে Bad Name
 //---------------------------------------------------------------------
+function checkName(nickName){
+    const goodEnding = ['a' , 'e', 'i', 'o','u','w','y', 'A', 'E', 'I', 'O', 'U', 'W', 'Y']
+    const nameEnding = nickName.charAt(nickName.length-1).toLowerCase();
+    console.log(nameEnding);
+    if(goodEnding.includes(nameEnding)){
+        console.log('Good Name')
+    }
+    else{
+        console.log('Bad name')
+    }
+}
+checkName('Alvee')
 
 //---------------------------------------------------------------------
