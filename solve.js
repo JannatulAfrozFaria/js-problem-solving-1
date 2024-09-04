@@ -116,9 +116,32 @@ function checkName(nickName){
         console.log('Bad name')
     }
 }
-checkName(1)
+// checkName(1)
 
+
+
+
+
+// ত োমাকে deleteInvalids() নামে এমন একটা ফাংশন ক্রি য়ে ট করতে হবে যা ইনপুট    হিসেবে একটি Array নেবে । ফাংশন টি আরেকটি Array রিটার্ন করবে যে খানে ভ্যালুগুল ো হবে শুধুনাম্বার । অর্থাৎ Array এর যে সকল elements নাম্বার না , তাদের ডিলিট করে শুধুমাত্র নাম্বার গুল োকে Array আকারে রিটার্ন করতে হবে ।
+// তুমি যদি এই ফাংশনে এই [ NaN, 1,12,0 ,-1 , undefined ] Array টি পাস কর ো তাহলে সে ত োমাকে রিটার্ন করবে [ 1 , 12 , 0 , -1 ]
 //---------------------------------------------------------------------
-function deleteInvalids(){
-    
+function deleteInvalids(data){
+if(typeof data !== Array){
+    console.log('You have to input an Array')
+}
+//using Array.isArray()
+// if(Array.isArray(data) === false){
+//     return "Invalid Array";
+//     }
+const numberDedicatedArray = data.filter(element => element && typeof element === 'number');
+console.log(numberDedicatedArray);
+return(numberDedicatedArray);
+}
+deleteInvalids([7,8,NaN]);
+
+
+function password(givenData){
+if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
+return 'invalid';
+}
 }
