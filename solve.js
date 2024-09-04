@@ -51,7 +51,7 @@ function countVowels(sentence){
     console.log(`There are ${count} vowels in this sentence`)
     return count;
 }
-countVowels("I love my country")
+// countVowels("I love my country")
 
 
 
@@ -69,18 +69,28 @@ countVowels("I love my country")
 
 //How to find out the numbers which have Duplicates in an array?-----------PROBLEM---6
 //---------------------------------------------------------------------
-const numArray = [1,22,4,5,4,7,9,7,6,4,5,3,13,6,13,34,5,34,90,101,25]
-const duplicates = numArray.filter(function(value,index,array){
-    return array.indexOf(value) === index
-})
-console.log(duplicates);
+// const numArray = [1,22,4,5,4,7,9,7,6,4,5,3,13,6,13,34,5,34,90,101,25]
+// const duplicates = numArray.filter(function(value,index,array){
+//     return array.indexOf(value) === index
+// })
+// console.log(duplicates);
 
 
 
-
+//বাকেরকে অসংখ্য টিকেট বিক্রি করতে হয়। বাকেরকে calculateMoney( ) নামে একটি ফাংশন বানিয়ে দিতে হবে যাতে প্রতি দিন টিকেট সেল করার সংখ্যা ইনপুট দিলে সে সকল খরচ বাদ দিয়ে কত টাকা থাকে তা বলে দিতে পারে । 
+// চিড়ি য়াখানায় প্রতি টিকেট বিক্রি হয় ১২০ টাকায় । আর ব্যয় এর মধ্যে প্রতিদিন ১ জন দার োয়ান কে দিতে হয় ৫০০ টাকা এবং ৮ জন স্টাফ কে লাঞ্চ করান োর জন্যে খরচ হয় জনপ্রতি ৫০ টাকা করে ।
 //---------------------------------------------------------------------
-
-//---------------------------------------------------------------------
+function calculateMoney(tickets){
+    if(tickets > 0){
+        const leftOverMoney = (tickets * 120) - (500 + (8*50))
+        console.log(leftOverMoney)
+        return leftOverMoney;
+    }
+    else{
+        console.log('Input Number Must be Positive')
+    }
+}
+calculateMoney(88)
 
 
 
