@@ -140,12 +140,39 @@ return(numberDedicatedArray);
 // deleteInvalids([7,8,NaN]);
 
 
-function password(givenData){
+
+//---------------------------------------------------------------------
+function passwordGenerate(givenData){
 if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
-return 'invalid';
+    console.log('input an object')
+    return 'invalid';
 }
+if ( !(givenData.name && givenData.siteName && givenData.birthYear) || typeof givenData.name !== 'string' || typeof givenData.siteName !== 'string' ||
+    typeof givenData.birthYear !== 'number' || givenData.birthYear < 1000 || givenData.birthYear >= 10000){
+        console.log('Property Error in Object')
+        return 'invalid';
+    }
 else{
-    const pass = `${givenData.siteName} + '#' + ${givenData.name}`
-    console.log(givenData)
+    const firstLetterOfSiteName = givenData.siteName.charAt(0).toUpperCase();
+    const restOftheSiteName = givenData.siteName.slice(1);
+    const pass = firstLetterOfSiteName + restOftheSiteName + '#' + givenData.name + '@'+ givenData.birthYear
+    console.log(pass);
 }
 }
+const objectInput = { name: "kolimuddin" , birthYear: 1999 , siteName: "google" }
+const objectInput2 = {  birthYear: 1999 , siteName: "google" }
+passwordGenerate(objectInput2);
+
+
+function password(givenData){
+    if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
+        return 'invalid';
+    }
+    if (!('name' in givenData && 'birthYear' in givenData && 'siteName' in givenData) ||
+    typeof givenData.name !== 'string' || typeof givenData.siteName !== 'string' ||
+    typeof givenData.birthYear !== 'number' || givenData.birthYear < 1000 || givenData.birthYear >= 10000) {
+        return "invalid";
+    }
+    const outputString = givenData.siteName.charAt(0).toUpperCase() + givenData.siteName.slice(1) + '#' + givenData.name + '@' + givenData.birthYear;
+        return outputString;
+    }
