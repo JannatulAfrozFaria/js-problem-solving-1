@@ -74,7 +74,6 @@ const duplicates = numArray.filter(function(value,index,array){
     return array.indexOf(value) === index
 })
 console.log(duplicates);
-//---------------------------------------------------------------------
 
 
 
