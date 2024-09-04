@@ -140,7 +140,10 @@ return(numberDedicatedArray);
 // deleteInvalids([7,8,NaN]);
 
 
-
+// কলিমুদ্দিন সাহেব এমন একটি ফাংশন চান, যে খানে তার ইনফরমেশন এবং ওয়েবসাইট নেম দিলে সেটা কলি মুদ্দিন সাহেবকে একটি মনে রাখার মত ো পাসওয়ার্ড জেনারেট করে দি তে পারবে । তার জন্য password() নামে একটা ফাংশন লি খতে হবে ।
+// Input : ফাংশন টি একটা object ইনপুট হিসেবে নিবে । যে খানে শুধু তিনটি প্র োপার্টি থাকবে ।
+// { name: "kolimuddin" , birthYear: 1999 , siteName: "google" } <br>
+// যদি ক োন একটা প্র োপার্টি মিসি ং থাকে অথবা যদি birthYear 4 ডি জি টে র না হয় ফাংশনটি রিটার্ন করবে একটি স্ট্রি ং যার ভ্যালুহবে invalid / any message 
 //---------------------------------------------------------------------
 function passwordGenerate(givenData){
 if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
