@@ -39,12 +39,12 @@
 //How to check the total number of vowels in a sentence? ------------PROBLEM---5
 //---------------------------------------------------------------------
 const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-function countVowels(sentence){
+function countVowels(sentence) {
     let count = 0;
     //looping through the string to check if there is any vowel, so, converting it to an array is important
     const letters = Array.from(sentence);
-    letters.forEach(function(value,index,array){
-        if(vowels.includes(value)){
+    letters.forEach(function (value, index, array) {
+        if (vowels.includes(value)) {
             count++;
         }
     })
@@ -100,19 +100,19 @@ function countVowels(sentence){
 // ইনপুট হি সে বে স্ট্রি ং টাইপে র বাইরে অন্য যে ক োন কি ছুদি লে এটা শুধুমাত্র “invalid” রি টার্ন
 // করবে ।
 //---------------------------------------------------------------------
-function checkName(nickName){
-    if(typeof nickName !== 'string'){
+function checkName(nickName) {
+    if (typeof nickName !== 'string') {
         console.log('input shpuld be a string')
         return 'invalid';
-        
-        }
-    const goodEnding = ['a' , 'e', 'i', 'o','u','w','y', 'A', 'E', 'I', 'O', 'U', 'W', 'Y']
-    const nameEnding = nickName.charAt(nickName.length-1).toLowerCase();
+
+    }
+    const goodEnding = ['a', 'e', 'i', 'o', 'u', 'w', 'y', 'A', 'E', 'I', 'O', 'U', 'W', 'Y']
+    const nameEnding = nickName.charAt(nickName.length - 1).toLowerCase();
     console.log(nameEnding);
-    if(goodEnding.includes(nameEnding)){
+    if (goodEnding.includes(nameEnding)) {
         console.log('Good Name')
     }
-    else{
+    else {
         console.log('Bad name')
     }
 }
@@ -125,17 +125,17 @@ function checkName(nickName){
 // ত োমাকে deleteInvalids() নামে এমন একটা ফাংশন ক্রি য়ে ট করতে হবে যা ইনপুট    হিসেবে একটি Array নেবে । ফাংশন টি আরেকটি Array রিটার্ন করবে যে খানে ভ্যালুগুল ো হবে শুধুনাম্বার । অর্থাৎ Array এর যে সকল elements নাম্বার না , তাদের ডিলিট করে শুধুমাত্র নাম্বার গুল োকে Array আকারে রিটার্ন করতে হবে ।
 // তুমি যদি এই ফাংশনে এই [ NaN, 1,12,0 ,-1 , undefined ] Array টি পাস কর ো তাহলে সে ত োমাকে রিটার্ন করবে [ 1 , 12 , 0 , -1 ]
 //---------------------------------------------------------------------
-function deleteInvalids(data){
-if(typeof data !== Array){
-    console.log('You have to input an Array')
-}
-//using Array.isArray()
-// if(Array.isArray(data) === false){
-//     return "Invalid Array";
-//     }
-const numberDedicatedArray = data.filter(element => element && typeof element === 'number');
-console.log(numberDedicatedArray);
-return(numberDedicatedArray);
+function deleteInvalids(data) {
+    if (typeof data !== Array) {
+        console.log('You have to input an Array')
+    }
+    //using Array.isArray()
+    // if(Array.isArray(data) === false){
+    //     return "Invalid Array";
+    //     }
+    const numberDedicatedArray = data.filter(element => element && typeof element === 'number');
+    console.log(numberDedicatedArray);
+    return (numberDedicatedArray);
 }
 // deleteInvalids([7,8,NaN]);
 
@@ -145,40 +145,40 @@ return(numberDedicatedArray);
 // { name: "kolimuddin" , birthYear: 1999 , siteName: "google" } <br>
 // যদি ক োন একটা প্র োপার্টি মিসি ং থাকে অথবা যদি birthYear 4 ডি জি টে র না হয় ফাংশনটি রিটার্ন করবে একটি স্ট্রি ং যার ভ্যালুহবে invalid / any message 
 //---------------------------------------------------------------------
-function passwordGenerate(givenData){
-if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
-    console.log('input an object')
-    return 'invalid';
-}
-if ( !(givenData.name && givenData.siteName && givenData.birthYear) || typeof givenData.name !== 'string' || typeof givenData.siteName !== 'string' ||
-    typeof givenData.birthYear !== 'number' || givenData.birthYear < 1000 || givenData.birthYear >= 10000){
+function passwordGenerate(givenData) {
+    if (typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true) {
+        console.log('input an object')
+        return 'invalid';
+    }
+    if (!(givenData.name && givenData.siteName && givenData.birthYear) || typeof givenData.name !== 'string' || typeof givenData.siteName !== 'string' ||
+        typeof givenData.birthYear !== 'number' || givenData.birthYear < 1000 || givenData.birthYear >= 10000) {
         console.log('Property Error in Object')
         return 'invalid';
     }
-else{
-    const firstLetterOfSiteName = givenData.siteName.charAt(0).toUpperCase();
-    const restOftheSiteName = givenData.siteName.slice(1);
-    const pass = firstLetterOfSiteName + restOftheSiteName + '#' + givenData.name + '@'+ givenData.birthYear
-    console.log(pass);
+    else {
+        const firstLetterOfSiteName = givenData.siteName.charAt(0).toUpperCase();
+        const restOftheSiteName = givenData.siteName.slice(1);
+        const pass = firstLetterOfSiteName + restOftheSiteName + '#' + givenData.name + '@' + givenData.birthYear
+        console.log(pass);
+    }
 }
-}
-const objectInput = { name: "kolimuddin" , birthYear: 1999 , siteName: "google" }
-const objectInput2 = {  birthYear: 1999 , siteName: "google" }
+const objectInput = { name: "kolimuddin", birthYear: 1999, siteName: "google" }
+const objectInput2 = { birthYear: 1999, siteName: "google" }
 passwordGenerate(objectInput);
 
 
-function password(givenData){
-    if(typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true){
+function password(givenData) {
+    if (typeof givenData !== 'object' || givenData === null || Array.isArray(givenData) === true) {
         return 'invalid';
     }
     if (!('name' in givenData && 'birthYear' in givenData && 'siteName' in givenData) ||
-    typeof givenData.name !== 'string' || typeof givenData.siteName !== 'string' ||
-    typeof givenData.birthYear !== 'number' || givenData.birthYear < 1000 || givenData.birthYear >= 10000) {
+        typeof givenData.name !== 'string' || typeof givenData.siteName !== 'string' ||
+        typeof givenData.birthYear !== 'number' || givenData.birthYear < 1000 || givenData.birthYear >= 10000) {
         return "invalid";
     }
     const outputString = givenData.siteName.charAt(0).toUpperCase() + givenData.siteName.slice(1) + '#' + givenData.name + '@' + givenData.birthYear;
-        return outputString;
-    }
+    return outputString;
+}
 
 
 
@@ -198,3 +198,49 @@ function password(givenData){
 // ফাংশন টি একটি number অথবা string রিটার্ন করবে ।
 // ● যদি savings 0 বা তার থেকে বেশি হয় তাহলে রি টার্ন করবে একটা number ( Total Savings )
 // ● যদি savings 0 থে কে ছ োট হয় তাহলে রিটার্ন করবে String যার ভ্যালুহবে earn more
+
+function monthlySavings(payments, livingCost) {
+    if (Array.isArray(payments) === false && typeof livingCost !== 'number') {
+        console.log('Input An Array in 1st Parameter and a number in 2nd Parameter')
+    }
+    else {
+        const totalPayment = payments.reduce((total, value, index, array)=> {
+            if (value >= 3000) {
+                value = value - ( value*0.2);
+            }
+            return total + value;
+        },0); //initial value of total is 0
+        const totalSaving = totalPayment - livingCost;
+        if (totalSaving < 0) {
+            console.log("Earn More")
+        }
+        else {
+            console.log(totalPayment);
+        }
+    }
+}
+const earningArray = [5000,3000]
+monthlySavings(earningArray, 4000)
+
+
+// function monthlySavings2(paymentArray, livingCost) {
+//     if (Array.isArray(paymentArray) === false || typeof livingCost !== 'number') {
+//         return "invalid input"
+//     }
+//     let sumOfPaymentElement = 0;
+//     for (let i = 0; i < paymentArray.length; i++) {
+//         if (paymentArray[i] >= 3000) {
+//             sumOfPaymentElement = sumOfPaymentElement + (paymentArray[i] - paymentArray[i] * 20 / 100);
+//         }
+//         else {
+//             sumOfPaymentElement = sumOfPaymentElement + paymentArray[i];
+//         }
+//     }
+//     const totalSaving = sumOfPaymentElement - livingCost;
+//     if (totalSaving < 0) {
+//         return "earn more"
+//     }
+//     else {
+//         return totalSaving;
+//     }
+// }
